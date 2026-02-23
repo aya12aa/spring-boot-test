@@ -44,5 +44,9 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    
+    @GetMapping("/me")
+    public User getMyProfile() {
+    // Return a dummy user profile
+        return new User("current-user", "Current User", 25, "current@example.com");
+    }
 }
